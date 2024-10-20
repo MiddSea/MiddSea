@@ -6,4 +6,5 @@ import (
 
 func main() {
 	z01.PrintRune('1')
+	z01.PrintRune('\n')
 }
