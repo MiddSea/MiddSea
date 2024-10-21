@@ -1,13 +1,18 @@
 package piscine
 
-func isRuneUpper(r rune) bool {
+import (
+	"unicode"
+	"fmt"
+	//
+)
+func isUpperRune(r rune) bool {
 	if r >= 'A' && r <= 'Z' {
 		return true
 	}
 	return false
 }
 
-func isRuneLower(r rune) bool {
+func isLowerRune(r rune) bool {
 	if r >= 'a' && r <= 'z' {
 		return true
 	}
@@ -16,7 +21,7 @@ func isRuneLower(r rune) bool {
 
 func isLetterString(s string) bool {
 	for _, r := range s {
-		if isRuneUpper(r) || isRuneLower(r) {
+		if isUpperRune(r) || isLowerRune(r) {
 			return true
 		}
 	}
@@ -29,11 +34,51 @@ func IsCamelCase(s string) bool {
 	} 
 	for i, r := range s {
 		if i > 0 && i <= lastIndex {
-		if if isUpperRune(prevRune) && isUpperRune(r) {
+		// TO DO 
+		//if isUpperRune(prevRune) && isUpperRune(r) {
 
+		//}
 		}
 	}
 }
+
+func PrintIndexAndRune(i int, r rune) {
+	fmt.Printf("i:%2d r: %c | ", i, r)
+}
+
+func CheckCamelCase(s string) bool {
+	// lowerCamelCase
+	// UpperCamelCase
+	// Rules for writing in camelCase:
+	var lenS = len(s)
+    var currentLenRune int
+	for i, r := range s {
+		if i == 0 && (unicode.IsLower(r) || unicode.IsUpper(r)) {
+			if i == 0 { // skip first rune if is lower or upper letter
+				fmt.Print("FST")
+				PrintIndexAndRune(i, r)
+				continue 
+			}
+
+		} 
+		PrintIndexAndRune(i, r)
+        currentLenRune = lenS - i // in byte
+	    if i + currentLenRune == lenS {
+			fmt.Printf ("*** last i: %d currentLenRune: %d  lenS: %d ", i, currentLenRune, lenS)
+		}
+	}
+	fmt.Print("len(s) = ", len(s))
+
+	return true
+	// The word does not end on a capitalized letter (CamelCasE).
+	// No two capitalized letters shall follow directly each other (CamelCAse).
+	// Numbers or punctuation are not allowed in the word anywhere (camelCase1).
+	
+}
+
+/* func SnakeCaseStr(s string) string {
+
+} */
 
 func CamelToSnakeCase(s string) string {
 	// lenS = len(s)
@@ -50,7 +95,11 @@ func CamelToSnakeCase(s string) string {
 }
 
 
-/* cameltosnakecase
+
+*/
+/*cameltosnakecase
+
+
 Instructions
 Write a function that converts a string from camelCase to snake_case.
 
