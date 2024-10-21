@@ -2,10 +2,9 @@ package piscine
 
 // this version is Seán David Middleton is unicode
 import (
-	"unicode"
 	"fmt"
+	"unicode"
 	//
-
 )
 
 func PrintIndexAndRuneUni(i int, r rune) {
@@ -19,24 +18,24 @@ func CheckCamelCaseUni(s string) bool {
 	// The word does not end on a capitalized letter (CamelCasE).
 	// No two capitalized letters shall follow directly each other (CamelCAse).
 	// Numbers or punctuation are not allowed in the word anywhere (camelCase1).
-	
+
 	var lenS = len(s)
-    var currentLenRune int
-	prev_i := 0 previous index
+	var currentLenRune int
+	var prev_i = -1 // previous index
 	for i, r := range s {
 		if i == 0 && (unicode.IsLower(r) || unicode.IsUpper(r)) {
 			if i == 0 { // skip first rune if is lower or upper letter
 				prev_i = i
 				fmt.Print("FST")
 				PrintIndexAndRune(i, r)
-				continue 
+				continue
 			}
 
-		} 
+		}
 		PrintIndexAndRuneUni(i, r)
-        currentLenRune = lenS - i // in byte
-	    if i + currentLenRune == lenS {
-			fmt.Printf ("*** last i: %d currentLenRune: %d  lenS: %d ", i, currentLenRune, lenS)
+		currentLenRune = lenS - i // in byte
+		if i+currentLenRune == lenS {
+			fmt.Printf("*** last i: %d currentLenRune: %d  lenS: %d ", i, currentLenRune, lenS)
 		}
 	}
 	fmt.Print("len(s) = ", len(s))
@@ -62,7 +61,7 @@ func CamelToSnakeCaseUni(s string) string{ // Seán's unicode version
 
 
 
- */
+*/
 /*cameltosnakecase
 
 Instructions
