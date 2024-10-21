@@ -24,13 +24,13 @@ func main() {
 	fmt.Println(piscine.RetainFirstHalf("AB"))
 	fmt.Println(piscine.RetainFirstHalf("áb")) // fails using RetainFirstHalf
 
-	fmt.Println(piscine.RetainFirstHalfRange("This is the 1st halfThis is the 2nd half"))
-	fmt.Println(piscine.RetainFirstHalfRange("A"))
-	fmt.Println(piscine.RetainFirstHalfRange(""))
-	fmt.Println(piscine.RetainFirstHalfReange("Hello World"))
+	fmt.Println(piscine.RetainFirstHalf("This is the 1st halfThis is the 2nd half"))
+	fmt.Println(piscine.RetainFirstHalf("A"))
+	fmt.Println(piscine.RetainFirstHalf(""))
+	fmt.Println(piscine.RetainFirstHalf("Hello World"))
 	//more tests by Seán
-	fmt.Println(piscine.RetainFirstHalfRange("AB"))
-	fmt.Println(piscine.RetainFirstHalfRange("áb")) // fails using RetainFirstHalf
+	fmt.Println(piscine.RetainFirstHalf("AB"))
+	fmt.Println(piscine.RetainFirstHalf("áb")) // fails using RetainFirstHalf
 
 }
 

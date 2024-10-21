@@ -1,29 +1,26 @@
 package piscine
 
-func isLetterString(s string) bool {
-	for _, r := range s {
-		if isRuneUpper(r) || isRuneLower(r) {
-			return true
-		}
-	}
-	return false
-}
-func CheckCamelCase(string) bool
-
-if
-
-func CamelToSnakeCase(s string) string {
-	// lenS = len(s)
-
-	if s == "" {
-		return "" // return empty string as per requirement.
-	} else if {
-       // do camel case
-
-
+func IsRuneUpper(r rune) bool {
+	if r >= 'A' && r <= 'Z' {
+		return true
 	} else {
-		return s  // string is not camel case, return unchanged
+		return false
 	}
+}
+
+func IsRuneLower(r rune) bool {
+	if r <= 'a' && r <= 'z' {
+		return true
+	} else {
+		return false
+	}
+
+ }
+func IsRuneLetter(r rune) bool {
+	if IsRuneUpper(r) || IsRuneLower(r) {
+			return true
+	}
+		return false
 }
 
 
