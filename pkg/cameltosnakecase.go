@@ -1,5 +1,19 @@
 package piscine
 
+func isRuneUpper(r rune) bool {
+	if r >= 'A' && r <= 'Z' {
+		return true
+	}
+	return false
+}
+
+func isRuneLower(r rune) bool {
+	if r >= 'a' && r <= 'z' {
+		return true
+	}
+	return false
+}
+
 func isLetterString(s string) bool {
 	for _, r := range s {
 		if isRuneUpper(r) || isRuneLower(r) {
@@ -8,9 +22,18 @@ func isLetterString(s string) bool {
 	}
 	return false
 }
-func CheckCamelCase(string) bool
+func IsCamelCase(s string) bool {
+	lastIndex := len(s)-1
+	if !isLetterString(s) {
+		return false
+	} 
+	for i, r := range s {
+		if i > 0 && i <= lastIndex {
+		if if isUpperRune(prevRune) && isUpperRune(r) {
 
-if
+		}
+	}
+}
 
 func CamelToSnakeCase(s string) string {
 	// lenS = len(s)
