@@ -85,7 +85,7 @@ func CamelToSnakeCase(s string) string {
 
 	if s == "" {
 		return "" // return empty string as per requirement.
-	} else if {
+	} else if true /* TO DO */ {
        // do camel case
 
 
@@ -96,7 +96,7 @@ func CamelToSnakeCase(s string) string {
 
 
 
-*/
+
 /*cameltosnakecase
 
 
