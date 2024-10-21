@@ -15,16 +15,16 @@ func RetainFirstHalfIndex(str string) string {
 
 func RetainFirstHalfRange(str string) string {
 	// try using a range []rune str
-	
-	var lenStr int = len(str)
+	var runeStr []rune = []rune(str)
+	var lenStr int = len(runeStr)
 	var midStr int = lenStr/2 // will round down
-	var firstHalfRuneRange []rune =  str
+	var firstHalfRuneRange []rune = runeStr[:midStr]
 	if lenStr == 1 {
 		midStr = 1
 	}
 	println("Str:", str, "lenStr:", lenStr, "midStr", midStr)
 	// return str[0:midStr]
-	return firstHalfRuneRange[0:midStr]
+	return string(firstHalfRuneRange) // TO DO
 }
 
 

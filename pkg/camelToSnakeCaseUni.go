@@ -21,11 +21,11 @@ func CheckCamelCaseUni(s string) bool {
 
 	var lenS = len(s)
 	var currentLenRune int
-	var prev_i = -1 // previous index
+	var Prev_i int = -1 // Declare Prev_i
 	for i, r := range s {
 		if i == 0 && (unicode.IsLower(r) || unicode.IsUpper(r)) {
 			if i == 0 { // skip first rune if is lower or upper letter
-				prev_i = i
+				Prev_i = i
 				fmt.Print("FST")
 				PrintIndexAndRune(i, r)
 				continue
