@@ -1,4 +1,4 @@
-# Seán David Middletons
+# Seán David Middleton
 
  👋 Hi, I’m Seán David Middleton @MiddSea
 <!---
